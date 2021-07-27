@@ -1,0 +1,19 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-3" *ngFor="let item of cityList; let i=index" >
+          <a #customButton [routerLink]="['/weatherDetails',item.id]" class="btn btn-outline-primary waves-effect" 
+              [ngStyle]="{'width': '100%', 'margin-left': '5px', 'margin-top': '15px'}">
+              <div class="form-template-list-view">
+                 
+                  <span class="h5 ml-5 d-block">Name : {{item.name}}</span>
+                  <span class="h5 ml-5 d-block">Temparature: {{item.temp}}(°C)</span>
+                  <span class="h5 ml-5 d-block">Sunrise: {{item.sunrise  | luxonFormat:' HH:mm a'}} </span>
+                  <span class="h5 ml-5 d-block">Sunset: {{item.sunset  | luxonFormat:'HH:mm a' }} </span>
+  
+              </div>
+            </a>
+      </div>
+  </div>
+  </div>
+  
+  
